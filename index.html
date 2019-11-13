@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/04cecfb6fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Random Meal</title>
@@ -13,23 +14,54 @@
     <a class="navbar-brand" href="#">MealGen</a>
   </nav>
   <br>
-  <div class="container d-flex justify-content-center">
-    <button class="btn btn-primary" href="#" type="button" id="generate">Generate Me A Meal!</button>
-    <br>
-    <br>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" id="meal-img" src="https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg" alt="Meal">
-      <div class="card-body">
-        <h5 class="card-title" id="meal-title">Kafteji</h5>
-        <p class="card-text" id="category">Vegetarian</p>
+
+  <div class="container justify-content-center"
+  <div class="row">
+      <div class="col">
+          <div class="card">
+              <div class="card-header">
+                MealGen
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Looking For Tonight's Meal?</h5>
+                <p class="card-text">If you are struggling to find a meal for tonight's dinner, click the button below to do it for you!</p>
+                <button class="btn btn-primary" href="#" type="button" id="generate">Generate Me A Meal!</button>
+              </div>
+            </div>
       </div>
-      <ul class="list-group list-group-flush" id="ingredients">
-        <li class="list-group-item" id="ing-1">Potatoes</li>
-        <li class="list-group-item" id="ing-2">Olive Oil</li>
-        <li class="list-group-item" id="ing-3">Green Pepper</li>
-      </ul>
-      <div class="card-body">
-        <a href="http://allrecipes.co.uk/consent/?dest=/recipe/12294/kafteji--tunisian-fried-vegetables-.aspx" class="card-link" id="meal-link">Go To Recipe</a>
+    </div>
+    <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+          <div class="card" style="width: 18rem;">
+              <img class="card-img-top" id="meal-img" src="https://www.themealdb.com/images/media/meals/1bsv1q1560459826.jpg" alt="Meal">
+              <div class="card-body">
+                <h5 class="card-title" id="meal-title">Kafteji</h5>
+                <p class="card-text" id="category">Vegetarian</p>
+              </div>
+              <ul class="list-group list-group-flush" id="ingredients">
+                <li class="list-group-item" id="ing-1">Potatoes</li>
+                <li class="list-group-item" id="ing-2">Olive Oil</li>
+                <li class="list-group-item" id="ing-3">Green Pepper</li>
+              </ul>
+              <div class="card-body">
+                <button class="btn btn-light" id="favorite">
+                    <a href="#"><i class="far fa-star"></i></a>
+                </button>
+                
+                <a href="http://allrecipes.co.uk/consent/?dest=/recipe/12294/kafteji--tunisian-fried-vegetables-.aspx" class="card-link" id="meal-link">Go To Recipe</a>
+              </div>
+            </div>
+      </div>
+      <div class="col-9 bg-light">
+        <h2>Tonight's Possibilities</h2>
+        <hr>
+        <ul class="list-group" id="favorited-meals">
+          <li class="list-group-item"><a href="">Meal</a> 
+            <button class="btn btn-danger" id="delete-meal"><i class="fas fa-trash"></i></button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
